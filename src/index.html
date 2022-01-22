@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BabyBot</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="bot.js" type="text/javascript"></script>
+  </head>
+  <body style="background: white;">
+    <label for="channel-list">Channels:</label>
+
+    <select name="channel-list" id="channellist" onchange="getSelectedValue();">
+      <!-- 
+      The value parts are the chat IDs. They usually start with -4...
+      and are 9 digits long in total. You can get to these IDs via sending
+      a message to the bot from a chat. After that you can append this
+      drop down list.
+
+      <option value="-4...">test_1</option>
+      <option value="-4...">test_2</option>
+      <option value="-4...">test-3</option>
+      -->
+    </select>
+
+    <form name="textboxform" action="" method="get">
+      Baby says: <br>
+      <input type="text" name="inputbox" value="" id="mytextbox">
+      <input type="button" id="send_button" name="sendbutton" value="Send" onclick="getData(this.form)">
+    </form>
+
+  </body>
+</html>
